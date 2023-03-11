@@ -1,9 +1,9 @@
 #!bin/bash
 apt update;
 apt upgrade -y;
-iptables -F;
 systemctl stop iptables;
 systemctl disable iptables;
+iptables -F;
 ufw allow 22 &&  echo "y" |  ufw enable;
 ufw allow 80;
 ufw allow 443;
